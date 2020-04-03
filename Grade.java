@@ -49,21 +49,19 @@ public class Grade {
 	public int average() {
 		return total()/3;
 	}
-	int average = (korean*english*math/3);
-	
 	public String level() {
 		String result= "";
-		if(average >= 90 ) {
+		if(average() >= 90 ) {
 			result = "A";
-		}else if(average >= 80) {
+		}else if(average() >= 80) {
 			result = "B";
-		}else if(average >= 70) {
+		}else if(average() >= 70) {
 			result = "C";
-		}else if(average >= 60) {
+		}else if(average() >= 60) {
 			result = "D";
-		}else if(average >= 50) {
+		}else if(average() >= 50) {
 			result = "E";
-		}else if(average <= 50) {
+		}else if(average() <= 50) {
 			result = "F";
 		}
 		return result;
@@ -71,13 +69,17 @@ public class Grade {
 
 		public String grade() {
 			String result = "";
-		switch (average) {
-		case 6:
-				break;
-	
-	
+		switch (average()/10) {
+		case 10:  result = "A"; break;
+		case 9:   result = "A"; break;
+		case 8:   result = "B"; break;
+		case 7:   result = "C"; break;
+		case 6:   result = "D"; break;
+		case 5:   result = "C"; break;
+		default:  result = "F"; break;
 	
 		}
+		return result;
 	}
 }
 	

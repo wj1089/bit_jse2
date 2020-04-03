@@ -41,7 +41,7 @@ public class Engine {
 				
 				System.out.println();
 				System.out.println(String.format("[%s : 총점 %d점, 평균 %d점, 학점 : %s]"
-						,grade.getName(), grade.total(), grade.average(), grade.level()));
+						,grade.getName(), grade.total(), grade.average(), grade.grade()));
 				break;
 			
 			}
