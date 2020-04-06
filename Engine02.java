@@ -4,8 +4,12 @@ import java.util.Scanner;
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Grade[] grades = new Grade[2];
+		Member[] members = new Member[2];
+		User[] users = new User[2];
+		
+		
 		while(true) {
-			System.out.println("0. 종료 1.성적표입력 2. 성적표출력");
+			System.out.println("0. 종료    1.성적표입력     2. 성적표출력    3. 총점별로 1,2,3등 이름 나열하기    4.회원가입    5.회원목록  6.회원 목록출력");
 			switch(scanner.nextInt()) {
 				case 0: System.out.println("종료");return;
 				case 1: System.out.println("성적표");
@@ -26,15 +30,62 @@ import java.util.Scanner;
 				
 				case 3:
 				System.out.println("총점별로 1,2,3등 이름 나열하기");
-				System.out.println(score[i]+"점 : "++);
+				String result = "";
+				for(int i=0;i<3;i++) {
+//					if(grade.rank>average) {
+//						result = "1위";
+//					}else if() {
+//						result = "2위";
+//					}else if() {
+//						result = "3위";
+//					}
+				}
+				break;
+				
+			
+			case 4:
+				System.out.println("회원가입을 실시합니다.");
+				
+				for(int i=0;i<2;i++) {
+					members[i] = join(scanner);
+				
+				System.out.println("회원님께서 입력하신 정보는");
+				System.out.print(String.format("[이름 : %s ,나이 :  %d   ,아이디: %s ,패스원드: %s 입니다.]",
+						members[i].getName(),
+						members[i].getAge(),
+						members[i].getUserid(),
+						members[i].getPasswd()));
+				}
+				break;
+			case 5:
+				System.out.println("회원목록");
+				for(int i=0;i<2;i++) {
+					users[i]=list(scanner);
+				}
+				System.out.println("회원님 성함을 입력해주세요.");
+				System.out.println("회원님 신장을 입력해주세요");
 				
 				break;
+				
+			case 6:
+				System.out.println("회원목록 출력");
+				for(int i=0; i<2; i++) {
+					User user = users[i];
+					System.out.println(String.format("입력하신 회원님들의 성함은 : %s이며,  키는  %d입니다.",
+							users[i].getName(),
+							users[i].getHeight()));
+				}
+				break; 
 				}
 			}
 		}	
+	
+	
+	
+	
 		public static Grade input(Scanner scanner) {
 			
-		Grade grade = new Grade();
+			Grade grade = new Grade();
 			System.out.println("이름을 입력해주세여.");
 			grade.setName(scanner.next());
 			System.out.println("국어점수를 입력해주세여.");
@@ -47,11 +98,29 @@ import java.util.Scanner;
 			grade.setScience(scanner.nextInt());
 			return grade;
 		}
-		public static Grade rank() {
-			
+		
+		
+		
+		public static Member join(Scanner scanner) {
+			Member member = new Member();
+			System.out.println("이름을 입력해주세요.");
+			member.setName(scanner.next());
+			System.out.println("나이를 입력해주세요.");
+			member.setAge(scanner.nextInt());
+			System.out.println("아이디를 입력해주세요.");
+			member.setUserid(scanner.next());
+			System.out.println("패스워드를 입력해주세요.");
+			member.setPasswd(scanner.next());
+			return member;
 		}
 		
-		
-		
+		public static User list(Scanner scanner) {
+			User user = new User();
+			System.out.println("회원님 성함을 입력해주세요!");
+			user.setName(scanner.next());
+			System.out.println("회원님 신장을 입력해주세요!");
+			user.setHeight(scanner.nextInt());
+			return user;
+		}
 		
 	}

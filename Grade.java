@@ -52,7 +52,7 @@ public class Grade {
 		return science;
 	}
 	public int rank() {
-		return average();
+		return average()/4;
 	}
 	
 	
