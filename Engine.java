@@ -35,17 +35,21 @@ public class Engine {
 					grade.setEnglish(sc.nextInt());
 				System.out.println("수학점수");
 					grade.setMath(sc.nextInt());
-				int total = grade.total();
-				int average = grade.average();
+//				int total = grade.total();
+//				int average = grade.average();
 				String credit = grade.level();
-				
 				System.out.println();
 				System.out.println(String.format("[%s : 총점 %d점, 평균 %d점, 학점 : %s]"
 						,grade.getName(), grade.total(), grade.average(), grade.grade()));
+				
+				
+				
+				
 				break;
 			
 			}
 		
 		}
+
 	}
 }

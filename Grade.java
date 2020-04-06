@@ -14,10 +14,12 @@ package com.jse.swing;
  */
 public class Grade {
 
+	private String name;
 	private int korean;
 	private int english;
 	private int math;
-	private String name;
+	private int science;
+	private int rank;
 
 	public void setKorean(int korean) {
 		this.korean = korean;
@@ -43,11 +45,22 @@ public class Grade {
 	public String getName() {
 		return name;
 	}
+	public void setScience(int science) {
+		this.science = science;
+	}
+	public int getScience() {
+		return science;
+	}
+	public int rank() {
+		return average();
+	}
+	
+	
 	public int total() {
 		return korean+english+math;
 	}
 	public int average() {
-		return total()/3;
+		return total()/4;
 	}
 	public String level() {
 		String result= "";
