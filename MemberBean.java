@@ -1,13 +1,13 @@
 package com.jse.swing;
 
-public class Member {
+public class MemberBean {
 
 	private String name;
 	private int age;
 	private String userid;
 	private String passwd;
 	
-	public Member(String name, int age, String userid, String passwd) {
+	public MemberBean(String name, int age, String userid, String passwd) {
 		this.name = name;
 		this.age = age;
 		this.userid = userid;

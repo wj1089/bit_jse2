@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine01 {
 	public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
-			Grade[] grades = new Grade[2]; 
+			GradeBean[] grades = new GradeBean[2]; 
 			//쓰는 이유 배열을 쓰는이유가 똑같은 곳에 저장할때 정보가 날라가는걸 방지
 	//		Grade[] score = null; 
 			//한번정보를 입력받으면 다시  null상태가 되면서 정보가 사라진다.
@@ -23,7 +23,7 @@ public class Engine01 {
 			case 2:
 				System.out.println("성적표출력");
 				for(int i=0;i<2;i++) {
-					Grade grade = grades[i];
+					GradeBean grade = grades[i];
 					System.out.println(String.format("[%s : 총점 %d점, 평균 %d점, 학점 : %s]",
 					grade.getName(), grade.total(), grade.average(), grade.grade()));
 				}
@@ -32,8 +32,8 @@ public class Engine01 {
 	}
 	
 }
-	static Grade input(Scanner scanner){//파라미터
-			Grade grade = new Grade();
+	static GradeBean input(Scanner scanner){//파라미터
+			GradeBean grade = new GradeBean();
 			System.out.println("학과점수 결과조회");
 			System.out.println("이름을 입력해주세요");
 				grade.setName(scanner.next());

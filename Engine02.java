@@ -3,8 +3,8 @@ import java.util.Scanner;
 	public class Engine02 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Grade[] grades = new Grade[2];
-		Member[] members = new Member[2];
+		GradeBean[] grades = new GradeBean[2];
+		MemberBean[] members = new MemberBean[2];
 		User[] users = new User[2];
 		
 		
@@ -19,7 +19,7 @@ import java.util.Scanner;
 				break;
 				case 2: System.out.println("성적표 출력");
 				for(int i=0;i<2;i++) {
-					Grade grade = grades[i];
+					GradeBean grade = grades[i];
 					System.out.println(String.format("[%s : 총점: %d점, 평균: %d점, 학점: %s]",
 							grades[i].getName(), 
 							grades[i].total(), 
@@ -79,9 +79,9 @@ import java.util.Scanner;
 		}	
 		
 		
-		public static Grade input(Scanner scanner) {
+		public static GradeBean input(Scanner scanner) {
 			System.out.println("성적표 출력을 위해 귀하의 이름,국어점수,영여점수,수학점수,과학점수를 입력해주세요.");
-			return new Grade(scanner.next(),
+			return new GradeBean(scanner.next(),
 					scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt());
 			
 			
@@ -101,11 +101,12 @@ import java.util.Scanner;
 		
 		
 		
-		public static Member join(Scanner scanner) {
+		public static MemberBean join(Scanner scanner) {
 			System.out.println("회원목록을 출력하기 위해 귀하의 이름, 나이, 아이디, 패스워드를 입력해주세요.");
-			return new Member(
+			return new MemberBean(
 					scanner.next(),scanner.nextInt(),scanner.next(),scanner.next());
-//			
+			
+			
 //			Member member = new Member();
 //			System.out.println("이름을 입력해주세요.");
 //			member.setName(scanner.next());
@@ -118,9 +119,9 @@ import java.util.Scanner;
 //			return member;
 		}
 		
+		
 		public static User list(Scanner scanner) {
 			System.out.println("회원목록을 출력하기위해서 귀하의 이름, 신장을 입력해주세요.");
-			
 			return new User(scanner.next(),scanner.nextInt());
 			
 			

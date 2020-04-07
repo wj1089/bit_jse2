@@ -9,7 +9,7 @@ public class Engine {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Grade grade = null;
+		GradeBean grade = null;
 		
 	while(true) {
 		System.out.println("0.종료   "+ "1.회원가입   " +  "2.로그인   "  + "3.학과점수  ");
@@ -24,7 +24,7 @@ public class Engine {
 //			   System.out.println("아이디를 입력해주세요.");
 //			   String userid = sc.next();
 			   
-		case 3: grade = new Grade();
+		case 3: grade = new GradeBean();
 				System.out.println("학과점수 결과조회");
 				System.out.println("이름을 입력해주세요");
 					grade.setName(sc.next());
