@@ -2,24 +2,16 @@ package com.jse.swing;
 
 public class Member {
 
-	private String userid;
-	private String passwd;
 	private String name;
 	private int age;
+	private String userid;
+	private String passwd;
 	
-	
-	public void setUserid(String userid) {
-		this.userid=userid;
-	}
-	public String getUserid() {
-		return userid;
-	}
-	
-	public void setPasswd(String passwd) {
-		this.passwd=passwd;
-	}
-	public String getPasswd() {
-		return passwd;
+	public Member(String name, int age, String userid, String passwd) {
+		this.name = name;
+		this.age = age;
+		this.userid = userid;
+		this.passwd = passwd;
 	}
 	
 	public void setName(String name) {
@@ -35,6 +27,20 @@ public class Member {
 	public int getAge() {
 		return age;
 	}
+	public void setUserid(String userid) {
+		this.userid=userid;
+	}
+	public String getUserid() {
+		return userid;
+	}
+	
+	public void setPasswd(String passwd) {
+		this.passwd=passwd;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+	
 }
 	
 	

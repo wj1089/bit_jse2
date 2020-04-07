@@ -5,6 +5,12 @@ public class User {
 	private String name;
 	private int height;
 	
+	public User(String nama, int height) {
+		this.name = name;
+		this. height = height;
+	}
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}

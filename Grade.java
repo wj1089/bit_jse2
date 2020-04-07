@@ -21,6 +21,15 @@ public class Grade {
 	private int science;
 	private int rank;
 
+	public Grade(String name,int korean,int english, int math,int science) {
+		this.name = name;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.science = science;
+	}
+	
+	
 	public void setKorean(int korean) {
 		this.korean = korean;
 	}
